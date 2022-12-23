@@ -120,7 +120,7 @@ De seguida ilustramos usando a nova função `list_tree`, assumindo que já corr
    (gdb) b list_tree
 ```
 
-3. Para confirmar que o _breakpoint* foi definido, pode pedir para listar os pontos de paragem da seguinte forma:
+3. Para confirmar que o _breakpoint_ foi definido, pode pedir para listar os pontos de paragem da seguinte forma:
 
 ```sh
    (gdb) info b
@@ -166,7 +166,7 @@ A [documentação oficial do ´gdb´](https://sourceware.org/gdb/current/onlined
 
 ## 3. Sanitizadores de código
 
-O `gcc` (abreviatura de *GNU C Compiler*) permite que o programa a compilar seja instrumentado com rotinas que verificam, em tempo de execução, se determinados comportamentos incorretos ocorrem.
+O `gcc` (abreviatura de _GNU C Compiler_) permite que o programa a compilar seja instrumentado com rotinas que verificam, em tempo de execução, se determinados comportamentos incorretos ocorrem.
 Estas opções de instrumentação chamam-se sanitizadores de código (_code sanitizers_).
 Existem diferentes tipos de sanitizadores ([lista de sanitizadores do GCC](https://gcc.gnu.org/onlinedocs/gcc/Instrumentation-Options.html)), cada um focado em detetar diferentes classes de erros.
 
@@ -193,7 +193,7 @@ _Atenção que estas operações variam ligeiramente entre diferentes compilador
 
 ## Ferramenta de Depuração Alternativa: `lldb`
 
-Existem várias ferramentas de depuração para além do `gcc`, dos quais destacamos o `lldb` (abreviatura de *low-level debugger*).
+Existem várias ferramentas de depuração para além do `gcc`, dos quais destacamos o `lldb` (abreviatura de _low-level debugger_).
 O `lldb` é funcionalmente idêntico ao `gdb` e mais fácil de obter em macOS (vem incluindo com as ferramentas de desenvolvimento).
 
 **É recomendada a utilização do `gdb` e não se dará apoio à utilização `lldb` no decurso da cadeira!**
@@ -201,7 +201,7 @@ O `lldb` é funcionalmente idêntico ao `gdb` e mais fácil de obter em macOS (v
 O ponto forte do `lldb` reside não em mais funcionalidade, mas sim na forma como é implementado.
 Seguindo a filosofia do projeto LLVM, é modular, e partilha vários componentes (_parser_, avaliador de expressões, etc.) com o compilador `clang` do mesmo projeto, beneficiando de todo o investimento neles feito.
 
-Para além disto, foi desenhado com integração em mente, expondo toda a funcionalidade por uma *API* (interface de programação de aplicações), seja para ferramentas simples de análise de binários, ou para um *IDE* (ambiente integrado de desenvolvimento) como o XCode.
+Para além disto, foi desenhado com integração em mente, expondo toda a funcionalidade por uma _API_ (interface de programação de aplicações), seja para ferramentas simples de análise de binários, ou para um _IDE_ (ambiente integrado de desenvolvimento) como o XCode.
 
 Na [documentação oficial do `lldb`](https://lldb.llvm.org/index.html), encontra-se uma [referência de correspondências entre comandos do `gdb` e `lldb`](https://lldb.llvm.org/use/map.html).
 As formas abreviadas dos comandos usados neste guião são quase todas iguais ao equivalente no `gdb`, mas as formas longas têm maior variação, por exemplo, `break <nome função>` corresponde a `breakpoint set --name <nome função>`, mas `b` funciona da mesma forma que no `gdb`).

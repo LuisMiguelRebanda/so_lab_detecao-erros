@@ -1,4 +1,4 @@
-CFLAGS = -g -Wall -std=c17
+CFLAGS = -g -Wall -std=c17 -fsanitize=address
 
 test: test.o bst.o
 	gcc $(CFLAGS) test.o bst.o -o test

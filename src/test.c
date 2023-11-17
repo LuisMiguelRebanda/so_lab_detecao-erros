@@ -3,6 +3,14 @@
 #include <stdlib.h>
 #include <string.h>
 
+void list_tree(node_t* p) {
+    if (p->left)
+        list_tree(p->left);
+    printf("%ld\n", p->key);
+    if (p->right)
+        list_tree(p->right);
+}
+
 int main(void) {
     node_t *root = NULL;
     int debug = 0;
@@ -32,6 +40,12 @@ int main(void) {
             debug = 1 - debug;
         } else if (c == 'p') {
             print_tree(root);
+        } else if (c == 'l') {
+            if (root != NULL) {
+                list_tree(root);
+            } else {
+                fprintf(stderr, "The tree is empty !\n");
+            }
         }
 
         if (c == '\n') {
